@@ -1,0 +1,244 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: sans-serif;
+}
+
+header {
+    position: fixed;
+    background-color: lightblue;
+    width: 100%;
+    height: 5rem;
+}
+.container {
+    display: flex;
+}
+
+header .container {
+    justify-content: space-between;
+    padding: 0.75rem 1.5rem;
+}
+
+header .company-title {
+    display: flex;
+    height: 100%;
+    align-items: center;
+    font-family: "Audiowide", sans-serif;
+}
+
+.company-title a {
+    text-decoration: none;
+    color: black;
+}
+
+.company-title h1 {
+    padding-left: 1rem;
+}
+
+.nav ul {
+    display: flex;
+    height: 100%;
+    align-items: center;
+}
+
+.nav ul li {
+    list-style: none;
+}
+
+.nav a {
+    text-decoration: none;
+    color: black;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.nav a:hover {
+    background-color: lightcoral;
+    color: white;
+}
+
+.nav a:active {
+    background-color: darkcyan;
+    color: white;
+}
+
+.body {
+    flex-direction: column;
+}
+
+.banner {
+    width: 100%;
+    height: 30rem;
+    padding-top: 5rem;
+    background-image: url(../images/banner-splash.avif);
+    background-size: cover;
+    background-position: center;
+    color: white;
+    /* background-color: lightcoral; */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.banner .mission {
+    padding: 3rem;
+    /* border-radius: 5px; */
+    background-color: rgba(0, 0, 0, 0.6);
+    /* margin: 0 3rem; */
+}
+
+
+.products {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.product {
+    width: 90%;
+    display: flex;
+    margin: 1rem;
+    padding: 1rem;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
+    justify-content: space-around;
+    align-content: center;
+    flex-wrap: wrap-reverse;
+}
+
+.wrap {
+    flex-wrap: wrap;
+}
+.reverse {
+    flex-direction: wrap-reverse;
+}
+
+.product .image-container {
+    width: 40%;
+    /* min-width: 20rem; */
+    border-radius: 5px;
+    margin: 0.75rem;
+    overflow: hidden;
+}
+
+.image-container .image {
+    width: 100%;
+    height: auto;
+    border-radius: 5px;
+}
+
+.product-info {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 40%;
+}
+
+
+.employees {
+    display: flex;
+    flex-wrap: wrap;
+    background-color: lightslategray;
+    padding: 1rem 0;
+    margin-top: 1rem;
+    justify-content: center;
+}
+
+.employee {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 25rem;
+}
+
+.employee-info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 0.5rem;
+    color: white;
+}
+
+.employee .image-container {
+    width: 10rem;
+    height: 10rem;
+    background-color: lightcoral;
+    border-radius: 5px;
+    margin: 0.75rem;
+}
+
+
+footer {
+    background-color: lightblue;
+    width: 100%;
+    padding: 1rem 0.5rem;
+    font-size: 0.75rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+@media only screen and (max-width: 720px) {
+    .extra {
+        display: none;
+    }
+}
+
+@media only screen and (max-width: 700px) {
+     header {
+        height: 6rem;
+    }
+
+    header .container {
+        flex-wrap: wrap;
+    }
+}
+
+@media only screen and (max-width: 480px) {
+    .company-title {
+        font-size: 3.25vw;
+    }
+
+    .nav {
+        font-size: 0.9rem;
+    }
+}
+
+@media only screen and (min-width: 481px) and (max-width: 770px) {
+    .product .image-container, .product-info {
+        width: 60vw;
+        text-align: center;
+    }
+}
+
+@media only screen and (max-width: 480px) {
+    .product {
+        padding: 0;
+        margin: 0;
+        width: 100%;
+        box-shadow: none;
+    }
+    
+    .product .image-container {
+        width: 100%;
+        margin: 0;
+        border-radius: 0;
+    }
+
+    .product-info {
+        padding-top: 0.5rem;
+        padding-bottom: 2rem;
+        text-align: center;
+        width: 100%;
+    }
+}
+
+@media only screen and (max-width: 420px) {
+    footer .location {
+        display: none;
+    }
+}
