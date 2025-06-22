@@ -118,15 +118,15 @@ header .company-title {
 
 .product .image-container {
     width: 40%;
-    /* min-width: 20rem; */
-    border-radius: 5px;
     margin: 0.75rem;
     overflow: hidden;
+    border-radius: 5px;
+    /* align-items: center; */
 }
 
 .image-container .image {
     width: 100%;
-    height: auto;
+    height: 100%;
 }
 
 .product-info {
